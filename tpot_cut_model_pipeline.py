@@ -1,10 +1,10 @@
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
-from sklearn.feature_selection import SelectFwe, VarianceThreshold, f_regression
+from sklearn.ensemble import AdaBoostRegressor, GradientBoostingRegressor
+from sklearn.linear_model import ElasticNetCV
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline, make_union
-from sklearn.preprocessing import MaxAbsScaler, StandardScaler
+from sklearn.preprocessing import StandardScaler
 from tpot.builtins import StackingEstimator
 try:
     from sklearn.impute import SimpleImputer as Imputer
@@ -22,19 +22,12 @@ imputer.fit(training_features)
 training_features = imputer.transform(training_features)
 testing_features = imputer.transform(testing_features)
 
-# Average CV score on the training set was:-12322.859967038718
+# Average CV score on the training set was:-13017.167427589111
 exported_pipeline = make_pipeline(
-    make_union(
-        make_pipeline(
-            SelectFwe(score_func=f_regression, alpha=0.018000000000000002),
-            VarianceThreshold(threshold=0.001)
-        ),
-        StandardScaler()
-    ),
-    VarianceThreshold(threshold=0.0005),
-    MaxAbsScaler(),
-    StackingEstimator(estimator=RandomForestRegressor(bootstrap=True, max_features=0.6500000000000001, min_samples_leaf=18, min_samples_split=18, n_estimators=100)),
-    GradientBoostingRegressor(alpha=0.95, learning_rate=0.1, loss="huber", max_depth=2, max_features=0.7000000000000001, min_samples_leaf=3, min_samples_split=19, n_estimators=100, subsample=0.8500000000000001)
+    StackingEstimator(estimator=GradientBoostingRegressor(alpha=0.75, learning_rate=0.001, loss="huber", max_depth=1, max_features=0.55, min_samples_leaf=13, min_samples_split=4, n_estimators=100, subsample=0.8)),
+    StackingEstimator(estimator=AdaBoostRegressor(learning_rate=0.1, loss="exponential", n_estimators=100)),
+    StandardScaler(),
+    ElasticNetCV(l1_ratio=0.55, tol=0.001)
 )
 
 exported_pipeline.fit(training_features, training_target)

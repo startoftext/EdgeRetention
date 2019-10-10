@@ -5,7 +5,7 @@ import pandas as pd
 
 pathToData = "cut_data_cleaned.csv"
 data = pd.read_csv(pathToData)
-print(data.head())
+# print(data.head())
 
 y = data.Cuts
 # X = data.drop('Cuts', axis=1)
@@ -20,9 +20,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_s
 # n_jobs = -1 means use all cores -2 means use n cores -1
 # Maybe try setting memory to 'auto' to allow caching fitness calculations
 # cv=7 means use 7-fold validation
-tpot = TPOTRegressor(generations=200, population_size=150, verbosity=2, n_jobs=-1,
+tpot = TPOTRegressor(generations=20, population_size=100, verbosity=2, n_jobs=-1,
                      periodic_checkpoint_folder='tpot_checkpoints', memory='auto',
-                     cv=7, mutation_rate=0.8, crossover_rate=0.2)
+                     cv=17, mutation_rate=0.8, crossover_rate=0.2)
 tpot.fit(X_train, y_train)
 print(tpot.score(X_test, y_test))
 tpot.export('tpot_cut_model_pipeline.py')
