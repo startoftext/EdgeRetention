@@ -29,7 +29,8 @@ X = imputer.fit_transform(X)
 # Scale our features (tpot only does StandardScaler and I need to scale to do PCA later)
 print("\nMean of X before scaling")
 print(X.mean(axis=0))
-scalar = preprocessing.StandardScaler()
+#scalar = preprocessing.StandardScaler()
+scalar = preprocessing.MinMaxScaler()
 scalar.fit(X)
 X = scalar.transform(X)
 
@@ -40,12 +41,12 @@ print(X.mean(axis=0))
 # TODO I could also try scaling by using min/max scalers
 
 # Normalize our features
-X = preprocessing.normalize(X)
+# X = preprocessing.normalize(X)
+#
+# print("\nSum of X*X along axis 1 should be 1 after normalizing")
+# print((X*X).sum(axis=1))
 
-print("\nSum of X*X along axis 1 should be 1 after normalizing")
-print((X*X).sum(axis=1))
-
-# TODO use PCA or something else to remove outliers
+# TODO use PCA or something else to remove outliers like kmeans
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_size=0.2)
 
@@ -54,7 +55,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_s
 # cv=7 means use 7-fold validation
 tpot = TPOTRegressor(generations=100, population_size=100, verbosity=2, n_jobs=-1,
                      periodic_checkpoint_folder='tpot_checkpoints', memory='auto',
-                     cv=5, mutation_rate=0.5, crossover_rate=0.5)
+                     cv=5, mutation_rate=0.5, crossover_rate=0.5, random_state=123)
 tpot.fit(X_train, y_train)
 
 print(tpot.score(X_test, y_test))
