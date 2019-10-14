@@ -1,10 +1,14 @@
+import matplotlib
 from tpot import TPOTRegressor
 from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 import pandas as pd
-
+import matplotlib.pyplot as plt
 from sklearn import preprocessing
 import numpy as np
+from sklearn import decomposition
+
+rand_state = 1234
 
 pathToData = "cut_data_cleaned.csv"
 data = pd.read_csv(pathToData)
@@ -29,8 +33,8 @@ X = imputer.fit_transform(X)
 # Scale our features (tpot only does StandardScaler and I need to scale to do PCA later)
 print("\nMean of X before scaling")
 print(X.mean(axis=0))
-#scalar = preprocessing.StandardScaler()
-scalar = preprocessing.MinMaxScaler()
+scalar = preprocessing.StandardScaler()
+# scalar = preprocessing.MinMaxScaler()
 scalar.fit(X)
 X = scalar.transform(X)
 
@@ -47,16 +51,28 @@ print(X.mean(axis=0))
 # print((X*X).sum(axis=1))
 
 # TODO use PCA or something else to remove outliers like kmeans
+# pca = decomposition.PCA(random_state=rand_state)
+# X_pca = pca.fit_transform(X)
+# print("\nPCA explained_variance_ratio: " + str(pca.explained_variance_ratio_))
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_size=0.2)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_size=0.2, random_state=rand_state)
 
 # n_jobs = -1 means use all cores -2 means use n cores -1
 # Maybe try setting memory to 'auto' to allow caching fitness calculations
 # cv=7 means use 7-fold validation
-tpot = TPOTRegressor(generations=100, population_size=100, verbosity=2, n_jobs=-1,
-                     periodic_checkpoint_folder='tpot_checkpoints', memory='auto',
-                     cv=5, mutation_rate=0.5, crossover_rate=0.5, random_state=123)
+tpot = TPOTRegressor(generations=100,
+                     population_size=100,
+                     verbosity=2,
+                     n_jobs=-1,
+                     periodic_checkpoint_folder='tpot_checkpoints',
+                     memory='auto',
+                     cv=5,
+                     mutation_rate=0.5,
+                     crossover_rate=0.5,
+                     random_state=rand_state)
 tpot.fit(X_train, y_train)
 
-print(tpot.score(X_test, y_test))
+print("\nTest data score:"+tpot.score(X_test, y_test)+"\n")
+
 tpot.export('generated_model_pipeline.py')
