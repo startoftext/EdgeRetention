@@ -26,12 +26,12 @@ X = data[['Fe (Iron)',
 imputer = preprocessing.Imputer(strategy='median')
 X = imputer.fit_transform(X)
 
-# Scale our features
+# Scale our features (tpot only does StandardScaler and I need to scale to do PCA later)
 print("\nMean of X before scaling")
 print(X.mean(axis=0))
-scaler = preprocessing.StandardScaler()
-scaler.fit(X)
-X = scaler.transform(X)
+scalar = preprocessing.StandardScaler()
+scalar.fit(X)
+X = scalar.transform(X)
 
 # We want to look for a mean that is zero (other then floating point errors)
 print("\nMean of X after scaling")
