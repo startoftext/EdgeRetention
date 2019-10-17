@@ -1,0 +1,123 @@
+                    Brand                       Knife             Steel   Pred Cuts  Actual Cuts
+0                 Schrade                     SCHF52D              1095   68.771614           69
+1                    ESEE                           4              1095   68.771614           75
+2                  Ka-Bar                         BK7      1095 Cro-Van   87.457275           87
+3               Greystone                      custom             12C27   55.773232           85
+4                  Opinal                         DYI            12C27M   78.768913           55
+5                   Ruike                     P831-SF            14C28N   82.606491           70
+6              Real Steel                        E571            14C28N   82.606491           71
+7                Morakniv                     Garberg            14C28N   82.606491           88
+8              Leatherman                Skeletool CX            154 CM  221.039963          124
+9              Cold Steel              Pocket Bushman              4116   60.350952           67
+10                   Buck                     Selkirk             420HC   56.685081           40
+11             Leatherman                       Surge             420HC   56.685081           44
+12                 Gerber                   Strongarm             420HC   56.685081           48
+13                 Gerber                   Strongarm             420HC   56.685081           50
+14                 Gerber                   Strongarm             420HC   56.685081           80
+15                   Buck                         311             420J2   49.741322           40
+16                 Ka-Bar               Becker Remora              440A   50.698990           38
+17                  Cutco                  Camp Knife              440B   50.698990           50
+18                  Ganzo                        G741              440C   73.196716           55
+19             Victorinox                  Hunter Pro              440C   73.196716           57
+20                Kizlyar                         Ute              440C   73.196716           70
+21                Kizlyar                        Hero              440C   73.196716           75
+22              Lionsteel                        Mini              440C   73.196716           77
+23                Ontario      Bushcraft Field Kinife              5160   80.942558           59
+24                 Gerber                       Index          5Cr15MoV   53.122669           37
+25                 Gerber  Bear Grylls Survival Knife          7Cr17MoV   32.892704           35
+26                   CRKT                     Swindle          8Cr13MoV   51.485867           39
+27                Kershaw                       Atmos          8Cr13MoV   51.485867           40
+28                Y-Start                       Jin01          8Cr13MoV   51.485867           42
+29                Y-Start                       Jin01          8Cr13MoV   51.485867           45
+30                   CRKT                        Noma          8Cr13MoV   51.485867           48
+31                Kershaw                       Atmos          8Cr13MoV   51.485867           55
+32                 Tonife                Luminescence          8Cr14MoV   58.451981           56
+33                Jaktkit                        Knv2         99Cr18MoV   91.216240           90
+34               Freewolf                   Warriors?          9Cr18MoV   73.428566           72
+35             Bark River                         JX6                A2  168.551773          191
+36                Tangram                    Santa Fe         ACUTO 440   96.194969           80
+37              DB Blades                         EDC             AEB-L   55.711369          108
+38             Cold Steel                     Spartan            AUS 10   93.881844          140
+39             Cold Steel                       Kobun             AUS 8   61.576263           52
+40                Ontario                       RAT 1             AUS 8   61.576263           56
+41                 Al Mar                      Falcon             AUS 8   61.576263           60
+42                 Samura                     SM00-23             AUS 8   61.576263           60
+43                 Samura                    SS67-045             AUS 8   61.576263           60
+44                 Samura             Bamboo SBA-0085             AUS 8   61.576263           67
+45                   Buck        Vantage Select Small         Bos 420HC   56.685081           67
+46               Spyderco                          K2           CPM 10V  400.533539          389
+47              Benchmade                 Griptillian          CPM 20CV  320.914215          351
+48         Survive Knives                     GSO 4.7            CPM 3V  212.892456          195
+49             Bark River                       Bravo            CPM 3V  212.892456          198
+50         Survive Knives                     GSO 4.7            CPM 3V  212.892456          207
+51             Cold Steel               Master Hunter            CPM 3V  212.892456          209
+52                  Boker      Bob Dozier Fixed Blade            CPM D2  206.212738          225
+53               Spyderco                      Mantra            CPM M4  253.994080          224
+54              Benchmade                     Contego            CPM M4  253.994080          280
+55               Spyderco                     Manix 2         CPM S110V  305.819366          281
+56               Spyderco                         PM2         CPM S110V  305.819366          295
+57              Benchmade                         940          CPM S30V  192.810394          175
+58             Leatherman                  Charge TTI          CPM S30V  192.810394          185
+59               Spyderco                      Sage 2          CPM S30V  192.810394          190
+60               Spyderco                      Shaman          CPM S30V  192.810394          191
+61                     ZT                        0450         CPM S35VN  141.922134           30
+62                     ZT                        0909         CPM S35VN  141.922134          109
+63                     ZT                        0909         CPM S35VN  141.922134          113
+64         LA Police Gear                        TBFK         CPM S35VN  141.922134          180
+65            Chris Reeve                     Sebenza         CPM S35VN  141.922134          187
+66                     ZT                        0220         CPM S35VN  141.922134          194
+67                  Kizer                      Gemini         CPM S35VN  141.922134          198
+68               Spyderco                    Native 5          CPM S90V  344.629425          278
+69               Spyderco                    Southard          CTS 204P  323.541321          321
+70                Strider                         SnG          CTS 40CP  243.011719          285
+71             Cold Steel                     Voyager           CTS BD1  125.968742          112
+72                 Gerber                   Strongarm          CTS BDZ1  104.485970           76
+73                 Gerber                   Strongarm          CTS BDZ1  104.485970          111
+74             Cold Steel                Broken Skull           CTS XHP  301.470215          242
+75                Kizlyar                     Biker Z                D2   80.776474           25
+76                Kizlyar                     Biker Z                D2   80.776474           53
+77                  Viper                      Keeper                D2   80.776474           67
+78                  Viper                      Keeper                D2   80.776474           70
+79                Kizlyar                 Prime D2 BT                D2   80.776474           75
+80                Kizlyar                     Biker Z                D2   80.776474           80
+81                Kizlyar                     Biker Z                D2   80.776474           85
+82                Kizlyar                 Prime DT BT                D2   80.776474          105
+83                Ontario                       RAT 1                D2   80.776474          120
+84                  Boker                    Vox Rold                D2   80.776474          208
+85                     ZT                        0562             Elmax  275.193695          236
+86              Microtech                         DOC             Elmax  275.193695          320
+87               Spyderco                Dragonfly II                H1   45.381744           42
+88               Spyderco                Dragonfly II                H1   45.381744           44
+89               Spyderco                Dragonfly II                H1   45.381744           44
+90               Spyderco                      Manbug             HAP40  284.380524          173
+91               Spyderco                Dragonfly II             HAP40  284.380524          300
+92             Fallkniven                        PCso           Lam CoS  133.733749          176
+93               Spyderco                  Spydiechef            LC200N  275.193695          226
+94     Shannon Steel Labs                        Apex            LC200N  275.193695          230
+95               Spyderco                  Spydiechef            LC200N  275.193695          330
+96                     WE                       620-J              M390  314.509308          309
+97              Lionsteel                         TRE              M390  314.509308          334
+98                     WE                      620-JJ              M390  314.509308          400
+99               Spyderco                     Manix 2           Maxamet  508.165558          563
+100              Spyderco                       Pingo              N690   99.048119           87
+101               Cudeman                         MT5              N695   99.048119          100
+102             Lionsteel                          T5            Niolox  133.286728          135
+103        Tindall Knives             Sawtooth Hunter               O-1  104.053192          109
+104              Spyderco                    Junction             PSF27  323.316681          375
+105  Foolhardy Knifeworks                      Custom             RWL34  208.792206          186
+106            Fallkniven                          U2              SGPS  232.871780          291
+107             Hultofors                          GK              SK-5   75.994820           58
+108             Lionsteel                        SR11          Sleipner  136.556427          105
+109             Lionsteel                        SR11          Sleipner  136.556427          182
+110                    ZT                        0180   Vanadis 4 Extra  240.719284          225
+111    Shannon Steel Labs                        Apex  Vanax SuperClean  228.194534          300
+112            Cold Steel                         SRK              VG-1  100.569504           73
+113            Fallkniven                          F1              VG10   67.996429           74
+114              Spyderco                      Delica              VG10   67.996429           75
+115                 Kizer                       Dukes              VG10   67.996429           83
+116            Victorinox                    Explorer        Victorinox   43.263981           36
+117            Victorinox                    Explorer        Victorinox   43.263981           38
+118            Victorinox                      Ferrox        Victorinox   43.263981           40
+119              Spyderco                Dragonfly II           ZDP 189  354.011078          330
+120              Spyderco                      Endura           ZDP 189  354.011078          336
+121              Spyderco                      Endura           ZDP 189  354.011078          345
