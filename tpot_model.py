@@ -10,7 +10,7 @@ from sklearn import decomposition
 
 rand_state = 1234
 
-pathToData = "cut_data_cleaned.csv"
+pathToData = "cut_data_cleaned - cut tests 20 degree.csv"
 data = pd.read_csv(pathToData)
 print("Data head")
 print(data.head())
@@ -19,22 +19,26 @@ y = data.Cuts
 # X = data.drop('Cuts', axis=1)
 # Select out the columns we want as features. I could have also just removed them from the CSV but I did it this way
 # so I could keep the extra data in the CSV.
-X = data[['Fe (Iron)',
+# I have removed 'Fe (Iron)', 'Edge angle'
+X = data[[
           'C (Carbon)', 'Cr (Chromium)', 'Co (Cobalt)', 'Cu (Copper)', 'Mn (Manganese)', 'Mo (Molybdenum)',
           'N (Nickel)', 'Nb (Niobium)', 'N (Nitrogen)', 'Phosphorous (P)', 'Si (Silicon)', 'Sulfur (S)',
-          'Ti (titanium)', 'W (Tungsten)', 'V (Vanadium)', 'Edge angle']]
+          'Ti (titanium)', 'W (Tungsten)', 'V (Vanadium)']]
 
 # Before scaling or normalizing we want to impute missing values
 # In this case the only missing values should be the edge angle that is missing in some cases
 # TODO I could try mean, median and most frequent for imputing missing values
-imputer = preprocessing.Imputer(strategy='median')
-X = imputer.fit_transform(X)
+# For now i do not need the imputer because I have limited the data to 20 degree angles
+# imputer = preprocessing.Imputer(strategy='median')
+# X = imputer.fit_transform(X)
 
 # Scale our features (tpot only does StandardScaler and I need to scale to do PCA later)
 print("\nMean of X before scaling")
 print(X.mean(axis=0))
-scalar = preprocessing.StandardScaler()
-# scalar = preprocessing.MinMaxScaler()
+# scalar = preprocessing.StandardScaler()
+# TODO I am still not sure if minMax is that much better then standardScalar
+scalar = preprocessing.MinMaxScaler()
+
 scalar.fit(X)
 X = scalar.transform(X)
 
@@ -42,7 +46,7 @@ X = scalar.transform(X)
 print("\nMean of X after scaling")
 print(X.mean(axis=0))
 
-# TODO I could also try scaling by using min/max scalers
+
 
 # Normalize our features
 # X = preprocessing.normalize(X)
@@ -61,18 +65,30 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_s
 # n_jobs = -1 means use all cores -2 means use n cores -1
 # Maybe try setting memory to 'auto' to allow caching fitness calculations
 # cv=7 means use 7-fold validation
-tpot = TPOTRegressor(generations=100,
-                     population_size=100,
+tpot = TPOTRegressor(generations=150,
+                     population_size=250,
                      verbosity=2,
                      n_jobs=-1,
                      periodic_checkpoint_folder='tpot_checkpoints',
                      memory='auto',
                      cv=5,
-                     mutation_rate=0.5,
-                     crossover_rate=0.5,
+                     mutation_rate=0.8,
+                     crossover_rate=0.2,
                      random_state=rand_state)
 tpot.fit(X_train, y_train)
 
-print("\nTest data score:"+tpot.score(X_test, y_test)+"\n")
+print("\nTest data score:"+str(tpot.score(X_test, y_test))+"\n")
+
+# TODO print out predictions for many samples
+predictions = tpot.predict(X)
+df = pd.DataFrame()
+df['Brand'] = data.Brand.astype(str)
+df['Knife'] = data.Knife.astype(str)
+df['Steel'] = data.Steel.astype(str)
+df['Pred Cuts'] = predictions
+df['Actual Cuts'] = data.Cuts
+
+with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'display.max_colwidth', 200, 'display.width', None):  # more options can be specified also
+    print(df)
 
 tpot.export('generated_model_pipeline.py')
