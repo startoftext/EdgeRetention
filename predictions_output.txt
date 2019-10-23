@@ -121,3 +121,13 @@
 119              Spyderco                Dragonfly II           ZDP 189  354.011078          330
 120              Spyderco                      Endura           ZDP 189  354.011078          336
 121              Spyderco                      Endura           ZDP 189  354.011078          345
+
+
+Generation 147 - Current best internal CV score: 0.8228053528938151
+Generation 148 - Current best internal CV score: 0.8228053528938151
+Generation 149 - Current best internal CV score: 0.8228053528938151
+Generation 150 - Current best internal CV score: 0.8228053528938151
+
+Best pipeline: ExtraTreesRegressor(DecisionTreeRegressor(Nystroem(VarianceThreshold(GradientBoostingRegressor(LassoLarsCV(input_matrix, normalize=True), alpha=0.85, learning_rate=0.1, loss=lad, max_depth=8, max_features=0.55, min_samples_leaf=20, min_samples_split=5, n_estimators=100, subsample=1.0), threshold=0.2), gamma=0.6000000000000001, kernel=poly, n_components=7), max_depth=1, min_samples_leaf=2, min_samples_split=20), bootstrap=False, max_features=1.0, min_samples_leaf=2, min_samples_split=7, n_estimators=100)
+
+Test data score:0.7653590649897296
