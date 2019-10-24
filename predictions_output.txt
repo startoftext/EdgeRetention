@@ -1,133 +1,465 @@
+(venv) james@james-desktop:~/PycharmProjects/EdgeRetention$ python3 tpot_model.py
+Data head
+                  Brand                   Knife   Steel  Fe (Iron)  C (Carbon)  Cr (Chromium)  Co (Cobalt)  Cu (Copper)  ...  Edge finish  Video date                                         Link  Pete's comments  Count Steel+sharpener  Sharpener  Count Steel+angle  Angle
+0              Spyderco               Mule Team   52100      96.93        1.00           1.45          0.0          0.0  ...     Polished   4/18/2019  https://www.youtube.com/watch?v=ZXz-CIv5NhY              NaN                      1        KME                1.0   17.0
+1               Ontario  Bushcraft Field Kinife    5160      97.52        0.60           0.80          0.0          0.0  ...          NaN   2/11/2017  https://www.youtube.com/watch?v=pYeOSKkaJbA              NaN                      1  Worksharp                1.0   20.0
+2  Erickson Knife Works       Small Fixed Blade      W2      97.48        1.18           0.15          0.0          0.0  ...          NaN   7/22/2019  https://www.youtube.com/watch?v=BnR8X2GCny0              NaN                      1    Factory                NaN    NaN
+3            Real Steel                    E571  14C28N      84.46        0.62          14.00          0.0          0.0  ...          NaN  12/17/2016  https://www.youtube.com/watch?v=SO2maqvQgCA              NaN                      1  Worksharp                1.0   20.0
+4                 Ruike                 P831-SF  14C28N      84.46        0.62          14.00          0.0          0.0  ...          NaN  10/14/2017  https://www.youtube.com/watch?v=1oKiuh9d1yI              NaN                      2  Worksharp                2.0   20.0
+
+[5 rows x 30 columns]
+/home/james/PycharmProjects/EdgeRetention/venv/lib/python3.7/site-packages/sklearn/utils/deprecation.py:66: DeprecationWarning: Class Imputer is deprecated; Imputer was deprecated in version 0.20 and will be removed in 0.22. Import impute.SimpleImputer from sklearn instead.
+  warnings.warn(msg, category=DeprecationWarning)
+
+Mean of X before scaling
+[1.20893382e+00 1.24527941e+01 5.98161765e-01 2.94117647e-04
+ 4.55955882e-01 1.41088235e+00 1.53823529e-01 9.90808824e-02
+ 5.53676471e-02 1.58823529e-02 5.18860294e-01 1.24264706e-02
+ 3.67647059e-05 8.54227941e-01 1.93275735e+00 1.84963235e+01]
+
+Mean of X after scaling
+[0.33604055 0.62263971 0.05981618 0.00367647 0.22797794 0.2687395
+ 0.02197479 0.02752247 0.03572106 0.07941176 0.13836275 0.04970588
+ 0.00367647 0.06570984 0.16106311 0.49971719]
+Generation 1 - Current best internal CV score: 0.7277868962508265
+Generation 2 - Current best internal CV score: 0.7376170428238311
+Generation 3 - Current best internal CV score: 0.7484260239288909
+Generation 4 - Current best internal CV score: 0.7527101803783328
+Generation 5 - Current best internal CV score: 0.7527101803783328
+Generation 6 - Current best internal CV score: 0.7527101803783328
+Generation 7 - Current best internal CV score: 0.7527101803783328
+Generation 8 - Current best internal CV score: 0.7668493567139746
+Generation 9 - Current best internal CV score: 0.7668493567139746
+Generation 10 - Current best internal CV score: 0.7668493567139746
+Generation 11 - Current best internal CV score: 0.7668493567139746
+Generation 12 - Current best internal CV score: 0.7668493567139746
+Generation 13 - Current best internal CV score: 0.7668493567139746
+Generation 14 - Current best internal CV score: 0.7668493567139746
+Generation 15 - Current best internal CV score: 0.7668493567139746
+Generation 16 - Current best internal CV score: 0.7668493567139746
+Generation 17 - Current best internal CV score: 0.7668493567139746
+Generation 18 - Current best internal CV score: 0.7708294134473995
+Generation 19 - Current best internal CV score: 0.7708294134473995
+Generation 20 - Current best internal CV score: 0.7708294134473995
+Generation 21 - Current best internal CV score: 0.7708294134473995
+Generation 22 - Current best internal CV score: 0.7708294134473995
+Generation 23 - Current best internal CV score: 0.7708294134473995
+Generation 24 - Current best internal CV score: 0.7708294134473995
+Generation 25 - Current best internal CV score: 0.7708294134473995
+Generation 26 - Current best internal CV score: 0.7708294134473995
+Generation 27 - Current best internal CV score: 0.7708294134473995
+Generation 28 - Current best internal CV score: 0.7731362684847121
+Generation 29 - Current best internal CV score: 0.7731362684847121
+Generation 30 - Current best internal CV score: 0.7769814843433296
+Generation 31 - Current best internal CV score: 0.7769814843433296
+Generation 32 - Current best internal CV score: 0.7769814843433296
+Generation 33 - Current best internal CV score: 0.7769814843433296
+Generation 34 - Current best internal CV score: 0.7769814843433296
+Generation 35 - Current best internal CV score: 0.7769814843433296
+Generation 36 - Current best internal CV score: 0.7769814843433296
+Generation 37 - Current best internal CV score: 0.7769814843433296
+Generation 38 - Current best internal CV score: 0.7769814843433296
+Generation 39 - Current best internal CV score: 0.7769814843433296
+Generation 40 - Current best internal CV score: 0.7769814843433296
+Generation 41 - Current best internal CV score: 0.777782824813312
+Generation 42 - Current best internal CV score: 0.777782824813312
+Generation 43 - Current best internal CV score: 0.777782824813312
+Generation 44 - Current best internal CV score: 0.777782824813312
+Generation 45 - Current best internal CV score: 0.777782824813312
+Generation 46 - Current best internal CV score: 0.777782824813312
+Generation 47 - Current best internal CV score: 0.777782824813312
+Generation 48 - Current best internal CV score: 0.777782824813312
+Generation 49 - Current best internal CV score: 0.777782824813312
+Generation 50 - Current best internal CV score: 0.777782824813312
+Generation 51 - Current best internal CV score: 0.777782824813312
+Generation 52 - Current best internal CV score: 0.777782824813312
+Generation 53 - Current best internal CV score: 0.777782824813312
+Generation 54 - Current best internal CV score: 0.777782824813312
+Generation 55 - Current best internal CV score: 0.777782824813312
+Generation 56 - Current best internal CV score: 0.777782824813312
+Generation 57 - Current best internal CV score: 0.777782824813312
+Generation 58 - Current best internal CV score: 0.777782824813312
+Generation 59 - Current best internal CV score: 0.777782824813312
+Generation 60 - Current best internal CV score: 0.777782824813312
+Generation 61 - Current best internal CV score: 0.777782824813312
+Generation 62 - Current best internal CV score: 0.7780649626286383
+Generation 63 - Current best internal CV score: 0.7780649626286383
+Generation 64 - Current best internal CV score: 0.7780649626286383
+Generation 65 - Current best internal CV score: 0.7780649626286383
+Generation 66 - Current best internal CV score: 0.7780649626286383
+Generation 67 - Current best internal CV score: 0.7780649626286383
+Generation 68 - Current best internal CV score: 0.7780649626286383
+Generation 69 - Current best internal CV score: 0.7780649626286383
+Generation 70 - Current best internal CV score: 0.7780649626286383
+Generation 71 - Current best internal CV score: 0.7780649626286383
+Generation 72 - Current best internal CV score: 0.7780649626286383
+Generation 73 - Current best internal CV score: 0.7780649626286383
+Generation 74 - Current best internal CV score: 0.7780649626286383
+Generation 75 - Current best internal CV score: 0.7780649626286383
+Generation 76 - Current best internal CV score: 0.7780649626286383
+Generation 77 - Current best internal CV score: 0.7780649626286383
+Generation 78 - Current best internal CV score: 0.7780649626286383
+Generation 79 - Current best internal CV score: 0.7780649626286383
+Generation 80 - Current best internal CV score: 0.7780649626286383
+Generation 81 - Current best internal CV score: 0.7821728129678194
+Generation 82 - Current best internal CV score: 0.7821728129678194
+Generation 83 - Current best internal CV score: 0.7821728129678194
+Generation 84 - Current best internal CV score: 0.7821728129678194
+Generation 85 - Current best internal CV score: 0.7821728129678194
+Generation 86 - Current best internal CV score: 0.7821728129678194
+Generation 87 - Current best internal CV score: 0.7821728129678194
+Generation 88 - Current best internal CV score: 0.7821728129678194
+Generation 89 - Current best internal CV score: 0.7821728129678194
+Generation 90 - Current best internal CV score: 0.7821728129678194
+Generation 91 - Current best internal CV score: 0.7821728129678194
+Generation 92 - Current best internal CV score: 0.7821728129678194
+Generation 93 - Current best internal CV score: 0.7821728129678194
+Generation 94 - Current best internal CV score: 0.7821728129678194
+Generation 95 - Current best internal CV score: 0.7821728129678194
+Generation 96 - Current best internal CV score: 0.7821728129678194
+Generation 97 - Current best internal CV score: 0.7821728129678194
+Generation 98 - Current best internal CV score: 0.7821728129678194
+Generation 99 - Current best internal CV score: 0.7821728129678194
+Generation 100 - Current best internal CV score: 0.7821728129678194
+
+Best pipeline: GradientBoostingRegressor(VarianceThreshold(LassoLarsCV(input_matrix, normalize=False), threshold=0.0005), alpha=0.8, learning_rate=0.1, loss=lad, max_depth=4, max_features=0.25, min_samples_leaf=12, min_samples_split=10, n_estimators=100, subsample=0.9000000000000001)
+
+Test data score:0.7512165948735957
+
+
+Testing our model on stuff its never seen before.
+
+                  Brand                Knife       Steel   Pred Cuts  Actual Cuts
+5              Morakniv              Garberg      14C28N  338.812910          275
+6              Morakniv              Garberg      14C28N  292.897585          280
+7              Morakniv              Garberg      14C28N  133.385178          109
+9                 Ruike                 P801      14C28N   76.310889           88
+29             Spyderco         Dragonfly II     ZDP 189   73.300887           57
+31             Spyderco               Endura     ZDP 189  124.759365           85
+33             Spyderco                Pingo        N690  307.738866          334
+40           Cold Steel      American Lawman     CTS XHP  329.817977          345
+51            Greystone               custom       12C27  194.120203          190
+52             Morakniv            Companion       12C27   73.300887           77
+58                 CRKT                Pilar    8Cr14Mov  302.296442          290
+63              Y-Start                Jin01    8Cr13MoV  290.585595          260
+66              Kershaw                Atmos    8Cr13MoV   82.611006          140
+67                 CRKT                  LCK    8Cr13MoV  797.748057          940
+69           Cold Steel          Working Man        4116   54.953758           58
+73       Tindall Knives      Sawtooth Hunter         O-1  797.748057          396
+74          L.T. Wright              Genesis          A2  307.738866          400
+77             Spyderco               Para 3  CPM Rex 45  194.120203          175
+92            North Arm                Skaha   CPM S35VN  180.775081          230
+93   Chris Reeve Knives              Sebenza   CPM S35VN   61.511010           60
+94            Benchmade                  940    CPM S30V  223.991604          475
+95             Spyderco               Sage 2    CPM S30V  582.664422          450
+101           Benchmade                  940    CPM S30V  248.566291          226
+102            Spyderco               Kapara    CPM S30V  221.160905          155
+110            Spyderco             Police 4        K390  362.683898          350
+111            Spyderco             Police 4        K390  148.570345          130
+112            Spyderco            Mule Team        K390  150.792716          135
+127          Fallkniven                 PCso     Lam CoS  797.748057          520
+129           Lionsteel                  TRE        M390   63.907627           70
+131                  WE               620-JJ        M390  704.710498          500
+132          Steel Will              Cutjack        M390  148.804615          182
+134          Steel Will                Modus        M390  192.142104          216
+137          Bark River            Kephart 5      CPM 4V  480.263388          600
+141           Lionsteel                 SR11    Sleipner  101.400889           87
+145            Spyderco               Mantra      CPM M4  248.566291          320
+146            Spyderco               Mantra      CPM M4  617.708907          489
+148            Spyderco             Advocate      CPM M4  680.382247          650
+157          Cold Steel              Spartan      AUS 10  540.929867          550
+165              Samura             SS67-045       AUS 8  558.827709          500
+167              Ka-Bar           Black Mule       AUS 8   63.907627           85
+182      Survive Knives              GSO 4.7      CPM 3V   76.310889           30
+183      Survive Knives              GSO 4.7      CPM 3V   66.102187           73
+189               Cutco           Camp Knife        440B  362.683898          385
+191           Lionsteel                 Mini        440C  273.063482          196
+192          Victorinox           Hunter Pro        440C  615.267018          440
+228             Ontario                RAT 1          D2   50.887980           50
+243            Spyderco               Para 3   CPM S110V  147.841881          176
+245            Spyderco                  PM2   CPM S110V   78.321808          105
+247           Benchmade             Altitude    CPM S90V   47.318776           45
+257                 GEC  #71 Farm and Field         1095  172.207377          105
+259           Microtech                  DOC       Elmax   55.921024           90
+261            Spyderco           Spydiechef      LC200N  402.202310          450
+269            Spyderco            Mule Team      LC200N  302.296442          240
+270            Spyderco             Waterway      LC200N  503.434507          700
+271          Cold Steel                  SRK        VG-1  485.082641          470
+
+Testing our model on the full dataset.
+
                     Brand                       Knife             Steel   Pred Cuts  Actual Cuts
-0                 Schrade                     SCHF52D              1095   68.771614           69
-1                    ESEE                           4              1095   68.771614           75
-2                  Ka-Bar                         BK7      1095 Cro-Van   87.457275           87
-3               Greystone                      custom             12C27   55.773232           85
-4                  Opinal                         DYI            12C27M   78.768913           55
-5                   Ruike                     P831-SF            14C28N   82.606491           70
-6              Real Steel                        E571            14C28N   82.606491           71
-7                Morakniv                     Garberg            14C28N   82.606491           88
-8              Leatherman                Skeletool CX            154 CM  221.039963          124
-9              Cold Steel              Pocket Bushman              4116   60.350952           67
-10                   Buck                     Selkirk             420HC   56.685081           40
-11             Leatherman                       Surge             420HC   56.685081           44
-12                 Gerber                   Strongarm             420HC   56.685081           48
-13                 Gerber                   Strongarm             420HC   56.685081           50
-14                 Gerber                   Strongarm             420HC   56.685081           80
-15                   Buck                         311             420J2   49.741322           40
-16                 Ka-Bar               Becker Remora              440A   50.698990           38
-17                  Cutco                  Camp Knife              440B   50.698990           50
-18                  Ganzo                        G741              440C   73.196716           55
-19             Victorinox                  Hunter Pro              440C   73.196716           57
-20                Kizlyar                         Ute              440C   73.196716           70
-21                Kizlyar                        Hero              440C   73.196716           75
-22              Lionsteel                        Mini              440C   73.196716           77
-23                Ontario      Bushcraft Field Kinife              5160   80.942558           59
-24                 Gerber                       Index          5Cr15MoV   53.122669           37
-25                 Gerber  Bear Grylls Survival Knife          7Cr17MoV   32.892704           35
-26                   CRKT                     Swindle          8Cr13MoV   51.485867           39
-27                Kershaw                       Atmos          8Cr13MoV   51.485867           40
-28                Y-Start                       Jin01          8Cr13MoV   51.485867           42
-29                Y-Start                       Jin01          8Cr13MoV   51.485867           45
-30                   CRKT                        Noma          8Cr13MoV   51.485867           48
-31                Kershaw                       Atmos          8Cr13MoV   51.485867           55
-32                 Tonife                Luminescence          8Cr14MoV   58.451981           56
-33                Jaktkit                        Knv2         99Cr18MoV   91.216240           90
-34               Freewolf                   Warriors?          9Cr18MoV   73.428566           72
-35             Bark River                         JX6                A2  168.551773          191
-36                Tangram                    Santa Fe         ACUTO 440   96.194969           80
-37              DB Blades                         EDC             AEB-L   55.711369          108
-38             Cold Steel                     Spartan            AUS 10   93.881844          140
-39             Cold Steel                       Kobun             AUS 8   61.576263           52
-40                Ontario                       RAT 1             AUS 8   61.576263           56
-41                 Al Mar                      Falcon             AUS 8   61.576263           60
-42                 Samura                     SM00-23             AUS 8   61.576263           60
-43                 Samura                    SS67-045             AUS 8   61.576263           60
-44                 Samura             Bamboo SBA-0085             AUS 8   61.576263           67
-45                   Buck        Vantage Select Small         Bos 420HC   56.685081           67
-46               Spyderco                          K2           CPM 10V  400.533539          389
-47              Benchmade                 Griptillian          CPM 20CV  320.914215          351
-48         Survive Knives                     GSO 4.7            CPM 3V  212.892456          195
-49             Bark River                       Bravo            CPM 3V  212.892456          198
-50         Survive Knives                     GSO 4.7            CPM 3V  212.892456          207
-51             Cold Steel               Master Hunter            CPM 3V  212.892456          209
-52                  Boker      Bob Dozier Fixed Blade            CPM D2  206.212738          225
-53               Spyderco                      Mantra            CPM M4  253.994080          224
-54              Benchmade                     Contego            CPM M4  253.994080          280
-55               Spyderco                     Manix 2         CPM S110V  305.819366          281
-56               Spyderco                         PM2         CPM S110V  305.819366          295
-57              Benchmade                         940          CPM S30V  192.810394          175
-58             Leatherman                  Charge TTI          CPM S30V  192.810394          185
-59               Spyderco                      Sage 2          CPM S30V  192.810394          190
-60               Spyderco                      Shaman          CPM S30V  192.810394          191
-61                     ZT                        0450         CPM S35VN  141.922134           30
-62                     ZT                        0909         CPM S35VN  141.922134          109
-63                     ZT                        0909         CPM S35VN  141.922134          113
-64         LA Police Gear                        TBFK         CPM S35VN  141.922134          180
-65            Chris Reeve                     Sebenza         CPM S35VN  141.922134          187
-66                     ZT                        0220         CPM S35VN  141.922134          194
-67                  Kizer                      Gemini         CPM S35VN  141.922134          198
-68               Spyderco                    Native 5          CPM S90V  344.629425          278
-69               Spyderco                    Southard          CTS 204P  323.541321          321
-70                Strider                         SnG          CTS 40CP  243.011719          285
-71             Cold Steel                     Voyager           CTS BD1  125.968742          112
-72                 Gerber                   Strongarm          CTS BDZ1  104.485970           76
-73                 Gerber                   Strongarm          CTS BDZ1  104.485970          111
-74             Cold Steel                Broken Skull           CTS XHP  301.470215          242
-75                Kizlyar                     Biker Z                D2   80.776474           25
-76                Kizlyar                     Biker Z                D2   80.776474           53
-77                  Viper                      Keeper                D2   80.776474           67
-78                  Viper                      Keeper                D2   80.776474           70
-79                Kizlyar                 Prime D2 BT                D2   80.776474           75
-80                Kizlyar                     Biker Z                D2   80.776474           80
-81                Kizlyar                     Biker Z                D2   80.776474           85
-82                Kizlyar                 Prime DT BT                D2   80.776474          105
-83                Ontario                       RAT 1                D2   80.776474          120
-84                  Boker                    Vox Rold                D2   80.776474          208
-85                     ZT                        0562             Elmax  275.193695          236
-86              Microtech                         DOC             Elmax  275.193695          320
-87               Spyderco                Dragonfly II                H1   45.381744           42
-88               Spyderco                Dragonfly II                H1   45.381744           44
-89               Spyderco                Dragonfly II                H1   45.381744           44
-90               Spyderco                      Manbug             HAP40  284.380524          173
-91               Spyderco                Dragonfly II             HAP40  284.380524          300
-92             Fallkniven                        PCso           Lam CoS  133.733749          176
-93               Spyderco                  Spydiechef            LC200N  275.193695          226
-94     Shannon Steel Labs                        Apex            LC200N  275.193695          230
-95               Spyderco                  Spydiechef            LC200N  275.193695          330
-96                     WE                       620-J              M390  314.509308          309
-97              Lionsteel                         TRE              M390  314.509308          334
-98                     WE                      620-JJ              M390  314.509308          400
-99               Spyderco                     Manix 2           Maxamet  508.165558          563
-100              Spyderco                       Pingo              N690   99.048119           87
-101               Cudeman                         MT5              N695   99.048119          100
-102             Lionsteel                          T5            Niolox  133.286728          135
-103        Tindall Knives             Sawtooth Hunter               O-1  104.053192          109
-104              Spyderco                    Junction             PSF27  323.316681          375
-105  Foolhardy Knifeworks                      Custom             RWL34  208.792206          186
-106            Fallkniven                          U2              SGPS  232.871780          291
-107             Hultofors                          GK              SK-5   75.994820           58
-108             Lionsteel                        SR11          Sleipner  136.556427          105
-109             Lionsteel                        SR11          Sleipner  136.556427          182
-110                    ZT                        0180   Vanadis 4 Extra  240.719284          225
-111    Shannon Steel Labs                        Apex  Vanax SuperClean  228.194534          300
-112            Cold Steel                         SRK              VG-1  100.569504           73
-113            Fallkniven                          F1              VG10   67.996429           74
-114              Spyderco                      Delica              VG10   67.996429           75
-115                 Kizer                       Dukes              VG10   67.996429           83
-116            Victorinox                    Explorer        Victorinox   43.263981           36
-117            Victorinox                    Explorer        Victorinox   43.263981           38
-118            Victorinox                      Ferrox        Victorinox   43.263981           40
-119              Spyderco                Dragonfly II           ZDP 189  354.011078          330
-120              Spyderco                      Endura           ZDP 189  354.011078          336
-121              Spyderco                      Endura           ZDP 189  354.011078          345
+0                Spyderco                   Mule Team             52100  258.971719          370
+1                 Ontario      Bushcraft Field Kinife              5160   86.706018           59
+2    Erickson Knife Works           Small Fixed Blade                W2  263.062266          550
+3              Real Steel                        E571            14C28N   76.310889           71
+4                   Ruike                     P831-SF            14C28N   76.310889           70
+5                Morakniv                     Garberg            14C28N   76.310889           30
+6                Morakniv                     Garberg            14C28N   76.310889           88
+7                Morakniv                     Garberg            14C28N   78.321808          105
+8                Morakniv                     Garberg            14C28N   76.310889           84
+9                   Ruike                        P801            14C28N  172.207377          105
+10                  Ruike                      P801SB            14C28N  183.468351           15
+11                  Ruike                      P801SB            14C28N  183.468351          215
+12                  Ruike                        P852            14C28N   76.310889           90
+13               Spyderco                   Mule Team              B70P  366.873795          450
+14               Spyderco                   Mule Team              B75P  339.874920          325
+15              Benchmade                 Griptillian          CPM 20CV  321.200099          351
+16                     ZT                        0470          CPM 20CV  321.200099          150
+17                     ZT                        0470          CPM 20CV  470.727131          375
+18             Leatherman                Skeletool CX            154 CM  153.296211          124
+19             Leatherman                 Charge Plus            154 CM  140.862695          150
+20                Ontario                        SK-5            154 CM  153.296211          100
+21                Emerson                        A100            154 CM  138.630141          136
+22                Emerson                        A100            154 CM  138.630141          225
+23             Bark River          MKB-9 FOBOS Design           CPM 154  153.296211          186
+24               Spyderco                   Stretch 2          V-Toku 2  194.692236          190
+25               Spyderco                   Stretch 2          V-Toku 2  336.291472          420
+26             Cold Steel                     Voyager           CTS BD1   95.761089          112
+27               Spyderco                      Endura           ZDP 189  329.817977          336
+28               Spyderco                Dragonfly II           ZDP 189  587.698844          380
+29               Spyderco                Dragonfly II           ZDP 189  582.664422          450
+30               Spyderco                Dragonfly II           ZDP 189  329.817977          330
+31               Spyderco                      Endura           ZDP 189  329.817977          345
+32               Spyderco                      Endura           ZDP 189  583.327937          840
+33               Spyderco                       Pingo              N690  101.400889           87
+34                Cudeman                         MT5              N695  101.400889           60
+35                Cudeman                         MT5              N695  101.400889          100
+36                Cudeman                         MT5              N695  376.792694          410
+37             Cold Steel                Broken Skull           CTS XHP  261.651364          242
+38               Spyderco                   Chaparral           CTS XHP  261.651364          295
+39             Cold Steel             American Lawman           CTS XHP  383.985819          370
+40             Cold Steel             American Lawman           CTS XHP  480.263388          600
+41               Spyderco                   Chaparral           CTS XHP  354.125625          450
+42               Spyderco                    Junction             PSF27  332.430391          375
+43               Spyderco                    Junction             PSF27  496.410099          550
+44               Spyderco                   Mule Team             PSF27  496.410099          450
+45                     ZT                        0180   Vanadis 4 Extra  255.337482          225
+46                     ZT                        0180   Vanadis 4 Extra  255.337482          294
+47               Bradford                  Guardian 4   Vanadis 4 Extra  418.860517          675
+48              DB Blades                         EDC             AEB-L  102.082910          108
+49                 Opinal                         DYI            12C27M   55.613837           55
+50               Morakniv                           ?             12C27   63.907627           88
+51              Greystone                      custom             12C27   63.907627           85
+52               Morakniv                   Companion             12C27   63.907627           70
+53                 Gerber                       Index          5Cr15MoV   38.811458           37
+54                Tangram                    Santa Fe         ACUTO 440   63.782070           80
+55                Tangram                    Santa Fe         ACUTO 440  121.363003           90
+56                Tangram                    Santa Fe         ACUTO 440  182.720588          180
+57                 Tonife                Luminescence          8Cr14MoV   55.921024           56
+58                   CRKT                       Pilar          8Cr14Mov   55.921024           90
+59                   CRKT                     Swindle          8Cr13MoV   47.318776           39
+60                   CRKT                        Noma          8Cr13MoV   47.318776           55
+61                   CRKT                        Noma          8Cr13MoV   47.318776           48
+62                Y-Start                       Jin01          8Cr13MoV   47.318776           42
+63                Y-Start                       Jin01          8Cr13MoV   47.318776           45
+64                Kershaw                       Atmos          8Cr13MoV   47.318776           40
+65                Kershaw                       Atmos          8Cr13MoV   47.318776           55
+66                Kershaw                       Atmos          8Cr13MoV  150.792716          135
+67                   CRKT                         LCK          8Cr13MoV  148.570345          130
+68             Cold Steel              Pocket Bushman              4116   54.953758           67
+69             Cold Steel                 Working Man              4116   54.953758           58
+70                Ontario                      Wraith              4116  141.043051          140
+71   Foolhardy Knifeworks                      Custom             RWL34  163.317034          186
+72               Spyderco                   Mule Team             RWL34  259.467023          475
+73         Tindall Knives             Sawtooth Hunter               O-1  133.385178          109
+74            L.T. Wright                     Genesis                A2  192.142104          216
+75             Bark River                         JX6                A2  192.142104          191
+76             Fallkniven                          U2              SGPS  204.758951          291
+77               Spyderco                      Para 3        CPM Rex 45  485.082641          470
+78               Spyderco                      Para 3        CPM Rex 45  604.982203          590
+79                     ZT                        0909         CPM S35VN  180.775081          109
+80                     ZT                        0909         CPM S35VN  180.775081          113
+81                     ZT                        0450         CPM S35VN  180.775081           89
+82                     ZT                        0450         CPM S35VN  180.775081           30
+83                  Kizer                      Gemini         CPM S35VN  180.775081          198
+84            Chris Reeve                     Sebenza         CPM S35VN  180.775081          187
+85         LA Police Gear                        TBFK         CPM S35VN  180.775081          180
+86                     ZT                        0220         CPM S35VN  180.775081          194
+87                  Kizer                    V3 Vigor         CPM S35VN  180.775081          210
+88                  Kizer                    V3 Vigor         CPM S35VN  180.775081          265
+89             Cold Steel                     Recon 1         CPM S35VN  295.574815          295
+90             Cold Steel                     Recon 1         CPM S35VN  180.775081          180
+91               Massdrop                        Keen         CPM S35VN  295.574815          325
+92              North Arm                       Skaha         CPM S35VN  290.585595          260
+93     Chris Reeve Knives                     Sebenza         CPM S35VN  180.775081          230
+94              Benchmade                         940          CPM S30V  194.120203          175
+95               Spyderco                      Sage 2          CPM S30V  194.120203          190
+96               Spyderco                      Sage 2          CPM S30V  270.452801          260
+97              Benchmade                         940          CPM S30V  270.452801          220
+98                   Buck           Vantive Pro Small          CPM S30V  270.452801          290
+99             Leatherman                  Charge TTI          CPM S30V  194.120203          185
+100             Benchmade                         940          CPM S30V  338.812910          330
+101             Benchmade                         940          CPM S30V  338.812910          275
+102              Spyderco                      Kapara          CPM S30V  273.063482          196
+103              Spyderco                      Kapara          CPM S30V  270.452801          260
+104                  Buck                         110          CPM S30V  194.120203          420
+105              Spyderco                      Shaman          CPM S30V  194.120203          191
+106              Spyderco                      Shaman          CPM S30V  270.452801          310
+107            Victorinox             Hunter Pro Alox              420A   79.419679           87
+108            Victorinox             Hunter Pro Alox              420A  156.228224          170
+109              Spyderco                    Police 4              K390  428.714229          240
+110              Spyderco                    Police 4              K390  797.748057          396
+111              Spyderco                    Police 4              K390  797.748057          520
+112              Spyderco                   Mule Team              K390  797.748057          940
+113              Spyderco                      Delica              VG10   89.420680           75
+114            Fallkniven                          F1              VG10   89.420680           74
+115                 Kizer                       Dukes              VG10   89.420680           83
+116                   SOG                      Vulcan              VG10   89.420680           99
+117              Spyderco                      Delica              VG10  237.790262          115
+118                 Kizer          Vanguard V3 Vigor?              VG10  291.960531          340
+119              Spyderco                      Endura              VG10   89.420680          135
+120              Spyderco                      Endura              VG10  237.790262          260
+121              Spyderco                    Southard          CTS 204P  309.854934          321
+122               Jaktkit                        Knv2         99Cr18MoV   79.427781           90
+123            Victorinox                    Explorer        Victorinox   40.860487           36
+124            Victorinox                    Explorer        Victorinox   40.860487           38
+125            Victorinox                           ?        Victorinox  152.777685           90
+126            Victorinox                      Ferrox        Victorinox   40.860487           40
+127            Fallkniven                        PCso           Lam CoS  147.841881          176
+128             Hultofors                          GK              SK-5   74.991533           58
+129             Lionsteel                         TRE              M390  307.738866          334
+130                    WE                       620-J              M390  307.738866          309
+131                    WE                      620-JJ              M390  307.738866          400
+132            Steel Will                     Cutjack              M390  402.202310          450
+133            Steel Will                       Modus              M390  402.202310          425
+134            Steel Will                       Modus              M390  540.929867          550
+135            Steel Will                       Modus              M390  598.344904          810
+136                 Viper                      Belone              M390  345.152354          275
+137            Bark River                   Kephart 5            CPM 4V  223.991604          475
+138              Spyderco                      Para 3            CPM 4V  370.823594          370
+139              Spyderco                      Para 3            CPM 4V  370.823594          600
+140             Lionsteel                        SR11          Sleipner  148.804615          105
+141             Lionsteel                        SR11          Sleipner  148.804615          182
+142              Spyderco                      Mantra            CPM M4  320.043258          224
+143             Benchmade                     Contego            CPM M4  320.043258          340
+144             Benchmade                     Contego            CPM M4  320.043258          280
+145              Spyderco                      Mantra            CPM M4  617.708907          489
+146              Spyderco                      Mantra            CPM M4  704.710498          500
+147              Spyderco                      Mantra            CPM M4  704.710498          700
+148              Spyderco                    Advocate            CPM M4  503.434507          700
+149              Spyderco                   Mule Team            CPM M4  617.708907          620
+150              Spyderco                          K2           CPM 10V  385.568727          389
+151              Spyderco                         K-2           CPM 10V  598.601401          550
+152                Gerber                   Strongarm          CTS BDZ1   67.157469           76
+153                Gerber                   Strongarm          CTS BDZ1   67.157469          111
+154                   SOG                 Terminus XR          CTS BDZ1   67.157469           65
+155                   SOG                 Terminus XR          CTS BDZ1  138.028785          135
+156            Cold Steel                     Spartan            AUS 10   82.611006          150
+157            Cold Steel                     Spartan            AUS 10   82.611006          140
+158               Ontario                       RAT 1             AUS 8   61.511010           56
+159            Cold Steel                       Kobun             AUS 8   61.511010           52
+160            Cold Steel                   Finn Wolf             AUS 8   61.511010           80
+161                Al Mar                      Falcon             AUS 8   61.511010           60
+162                Al Mar                      Falcon             AUS 8  124.743825          125
+163                Samura             Bamboo SBA-0085             AUS 8   61.511010           67
+164                Samura                     SM00-23             AUS 8   61.511010           60
+165                Samura                    SS67-045             AUS 8   61.511010           60
+166                Ka-Bar                  Black Mule             AUS 8  124.759365          105
+167                Ka-Bar                  Black Mule             AUS 8  124.759365           85
+168                Ka-bar                      Dozier             AUS-8   61.511010           73
+169            Leatherman                       Surge             420HC   52.412000           44
+170                Gerber                   Strongarm             420HC   52.412000           48
+171                Gerber                   Strongarm             420HC   52.412000           50
+172                Gerber                   Strongarm             420HC   52.412000           80
+173                  Buck                     Selkirk             420HC   52.412000           40
+174            Leatherman                       Surge             420HC   56.124145           60
+175                  Buck                         110             420HC   52.412000          115
+176                  Buck        Vantage Select Small         Bos 420HC   52.412000           67
+177            Bark River                       Bravo            CPM 3V  195.620461          198
+178            Cold Steel               Master Hunter            CPM 3V  195.620461          209
+179        Survive Knives                     GSO 4.7            CPM 3V  195.620461           85
+180        Survive Knives                     GSO 4.7            CPM 3V  195.620461          195
+181        Survive Knives                     GSO 4.7            CPM 3V  195.620461          207
+182        Survive Knives                     GSO 4.7            CPM 3V  302.296442          290
+183        Survive Knives                     GSO 4.7            CPM 3V  302.296442          240
+184              Spyderco                      Para 3          CTS BD1N  199.281051          150
+185              Spyderco                      Para 3          CTS BD1N  199.281051          375
+186                  Buck                         311             420J2   54.131788           40
+187                Ka-Bar               Becker Remora              440A   31.347114           38
+188              Z-Hunter                 Fixed Blade              440A  130.280915           30
+189                 Cutco                  Camp Knife              440B   50.887980           50
+190                 Ganzo                        G741              440C   73.300887           55
+191             Lionsteel                        Mini              440C   73.300887           77
+192            Victorinox                  Hunter Pro              440C   73.300887           57
+193               Kizlyar                        Hero              440C   73.300887           75
+194               Kizlyar                         Ute              440C   73.300887           70
+195                Gerber  Bear Grylls Survival Knife          7Cr17MoV   42.681297           35
+196               Strider                         SnG          CTS 40CP  122.279219          285
+197              Freewolf                   Warriors?          9Cr18MoV   88.968513           72
+198                Civivi                      Praxis          9Cr18MoV   88.968513           90
+199                Civivi                      Praxis          9Cr18MoV  192.228898          210
+200         Creely Blades                        Mako          Cru Wear  381.632703          375
+201         Creely Blades                        Mako          Cru Wear  381.632703          350
+202              Spyderco                      Para 3          Cru Wear  314.420026          300
+203              Spyderco                   Mule Team          Cru Wear  381.632703          400
+204              Spyderco                   Mule Team               PD1  426.805372          550
+205              Spyderco                Dragonfly II                H1   43.291760           42
+206              Spyderco                Dragonfly II                H1   43.291760           44
+207              Spyderco                Dragonfly II                H1   43.291760           44
+208         Creely Blades                        Mako        Nitrobe 77  317.345547          225
+209                Ka-Bar                         BK7      1095 Cro-Van  102.904741           87
+210                 Boker      Bob Dozier Fixed Blade            CPM D2  225.200667          225
+211                 Boker      Bob Dozier Fixed Blade            CPM D2  426.131687          440
+212             Lionsteel                          T5            Niolox  104.816757          135
+213               Ontario                       RAT 1                D2   76.261624          120
+214                 Viper                      Keeper                D2   76.261624           67
+215                 Viper                      Keeper                D2   76.261624           70
+216                 Viper                     Keeper                 D2   76.261624           95
+217               Kizlyar                 Prime D2 BT                D2   76.261624           75
+218               Kizlyar                 Prime DT BT                D2   76.261624          105
+219               Kizlyar                     Biker Z                D2   76.261624           53
+220               Kizlyar                     Biker Z                D2   76.261624           25
+221               Kizlyar                     Biker Z                D2   76.261624           80
+222                 Boker                    Vox Rold                D2   76.261624          208
+223               Kizlyar                     Biker Z                D2   76.261624           85
+224               Kizlyar                        Zedd                D2   76.261624           67
+225               Ontario                       RAT 1                D2  292.897585          220
+226               Ontario                       RAT 1                D2  292.897585          340
+227               Ontario                       RAT 1                D2  292.897585          240
+228               Ontario                       RAT 1                D2  292.897585          280
+229               Ontario                       RAT 1                D2  292.897585          290
+230              Spyderco                      Manbug             HAP40  257.698215          173
+231              Spyderco                Dragonfly II             HAP40  257.698215          300
+232              Spyderco                Dragonfly II             HAP40  626.325813          415
+233    Shannon Steel Labs                        Apex  Vanax SuperClean  319.129537          300
+234    Shannon Steel Labs                        Apex  Vanax SuperClean  631.867954          550
+235    Shannon Steel Labs                        Apex  Vanax SuperClean  631.867954          680
+236    Shannon Steel Labs                        Apex  Vanax SuperClean  644.214175          790
+237              Spyderco                     Manix 2           Maxamet  598.494199          563
+238              Spyderco                     Manix 2           Maxamet  907.385654          810
+239              Spyderco                    Native 5           Maxamet  907.385654         1050
+240              Spyderco                   Mule Team           Maxamet  907.385654         1075
+241              Spyderco                     Manix 2         CPM S110V  286.719848          281
+242              Spyderco                         PM2         CPM S110V  286.719848          295
+243              Spyderco                      Para 3         CPM S110V  558.827709          500
+244              Spyderco                         PM2         CPM S110V  680.382247          680
+245              Spyderco                         PM2         CPM S110V  680.382247          650
+246              Spyderco                    Native 5          CPM S90V  313.494624          278
+247             Benchmade                    Altitude          CPM S90V  615.267018          440
+248              Spyderco                   Mule Team          CPM S90V  615.267018          700
+249         Creely Blades                        Mako       CPM Rex 121  945.494546          950
+250         Creely Blades                        Mako       CPM Rex 121  968.567277         1300
+251         Creely Blades                        Mako       CPM Rex 121  951.176696          500
+252         Creely Blades                        Mako       CPM Rex 121  951.176696         1200
+253         Creely Blades                        Mako       CPM Rex 121  968.567277         1540
+254              Unknown             Shirogorov clone         CPM S125V  703.725774          650
+255                  ESEE                           4              1095   74.283810           75
+256               Schrade                     SCHF52D              1095   74.283810           69
+257                   GEC         #71 Farm and Field               1095  221.160905          155
+258                    ZT                        0562             Elmax  248.566291          236
+259             Microtech                         DOC             Elmax  248.566291          320
+260              Spyderco                   Mule Team             Elmax  362.683898          475
+261              Spyderco                  Spydiechef            LC200N  248.566291          226
+262              Spyderco                  Spydiechef            LC200N  248.566291          330
+263              Spyderco                  Spydiechef            LC200N  449.804126          550
+264              Spyderco                  Spydiechef            LC200N  449.804126          430
+265    Shannon Steel Labs                        Apex            LC200N  248.566291          230
+266    Shannon Steel Labs                        Apex            LC200N  362.683898          390
+267    Shannon Steel Labs                        Apex            LC200N  362.683898          525
+268    Shannon Steel Labs                        Apex            LC200N  429.758663          300
+269              Spyderco                   Mule Team            LC200N  362.683898          350
+270              Spyderco                    Waterway            LC200N  362.683898          385
+271            Cold Steel                         SRK              VG-1   66.102187           73
+(venv) james@james-desktop:~/PycharmProjects/EdgeRetention$
 
-
-Generation 147 - Current best internal CV score: 0.8228053528938151
-Generation 148 - Current best internal CV score: 0.8228053528938151
-Generation 149 - Current best internal CV score: 0.8228053528938151
-Generation 150 - Current best internal CV score: 0.8228053528938151
-
-Best pipeline: ExtraTreesRegressor(DecisionTreeRegressor(Nystroem(VarianceThreshold(GradientBoostingRegressor(LassoLarsCV(input_matrix, normalize=True), alpha=0.85, learning_rate=0.1, loss=lad, max_depth=8, max_features=0.55, min_samples_leaf=20, min_samples_split=5, n_estimators=100, subsample=1.0), threshold=0.2), gamma=0.6000000000000001, kernel=poly, n_components=7), max_depth=1, min_samples_leaf=2, min_samples_split=20), bootstrap=False, max_features=1.0, min_samples_leaf=2, min_samples_split=7, n_estimators=100)
-
-Test data score:0.7653590649897296

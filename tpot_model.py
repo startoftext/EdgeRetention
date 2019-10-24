@@ -66,10 +66,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, test_s
 # n_jobs = -1 means use all cores -2 means use n cores -1
 # Maybe try setting memory to 'auto' to allow caching fitness calculations
 # cv=7 means use 7-fold validation
-tpot = TPOTRegressor(generations=150,
-                     population_size=250,
+tpot = TPOTRegressor(generations=100,
+                     population_size=100,
                      verbosity=2,
-                     n_jobs=-2,
+                     n_jobs=-1,
                      periodic_checkpoint_folder='tpot_checkpoints',
                      memory='auto',
                      cv=5,
@@ -81,6 +81,20 @@ tpot.fit(X_train, y_train)
 
 print("\nTest data score:"+str(tpot.score(X_test, y_test))+"\n")
 
+print("\nTesting our model on stuff its never seen before.\n")
+predictions = tpot.predict(X_test)
+df = pd.DataFrame()
+test_data = data[data.index.isin(y_test.index)]
+df['Brand'] = test_data.Brand.astype(str)
+df['Knife'] = test_data.Knife.astype(str)
+df['Steel'] = test_data.Steel.astype(str)
+df['Pred Cuts'] = predictions
+df['Actual Cuts'] = y_test.values
+
+with pd.option_context('display.max_rows', None, 'display.max_columns', None, 'display.max_colwidth', 200, 'display.width', None):  # more options can be specified also
+    print(df)
+
+print("\nTesting our model on the full dataset.\n")
 # TODO print out predictions for many samples
 predictions = tpot.predict(X)
 df = pd.DataFrame()
